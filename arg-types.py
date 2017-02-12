@@ -1,4 +1,4 @@
-from codegen.argtypes import ArgType, matcher
+from argtypes import ArgType, matcher
 from codegen import reversewrapper
 
 class CairoMatrixArg(ArgType):

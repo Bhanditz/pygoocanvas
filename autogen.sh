@@ -134,6 +134,7 @@ do
 	if test -z "$NO_LIBTOOLIZE" ; then 
 	  echo "Running libtoolize..."
 	  libtoolize --force --copy
+    cp ../../ltmain.sh .     # Fix for Arch, libtoolize puts it in wrong dir.
 	fi
       fi
       echo "Running aclocal $aclocalinclude ..."

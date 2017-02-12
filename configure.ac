@@ -60,7 +60,11 @@ dnl when using libtool 2.x create libtool early, because it's used in configure
 m4_ifdef([LT_OUTPUT], [LT_OUTPUT]) 
 AM_PROG_CC_C_O
 
+m4_define_default([_AM_PYTHON_INTERPRETER_LIST],
+[ python2 python2.7 python2.6 python2.5 python2.4 python2.3 dnl
+  python2.2 python2.1 python2.0 python])
 AM_PATH_PYTHON(2.2)
+my_CHECK_MAJOR_VERSION([PYTHON_VERSION], [2])
 
 AM_CHECK_PYTHON_HEADERS(,[AC_MSG_ERROR(could not find Python headers)])
 
